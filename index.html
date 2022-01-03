@@ -18,9 +18,9 @@
     <div class="row mt-2">
         <div class="col text-center">
 
-            <button class="btn-danger">New Game</button>
-            <button class="btn-primary">Request Card</button>
-            <button class="btn-primary">Stop</button>
+            <button id="btnNew" class="btn-danger">New Game</button>
+            <button id="btnRequest" disabled="disabled" class="btn-primary">Request Card</button>
+            <button id="btnStop" disabled="disabled" class="btn-primary">Stop</button>
 
         </div>
     </div>
@@ -28,12 +28,8 @@
     <div class="row container">
         <div class="col">
             <h1>Player - <small> 0 </small></h1>
-            <div id="player-cards">
-                <img class="carta" src="assets/cartas/cartas/10D.png" alt="">
-                <img class="carta" src="assets/cartas/cartas/10D.png" alt="">
-                <img class="carta" src="assets/cartas/cartas/10D.png" alt="">
-                <img class="carta" src="assets/cartas/cartas/10D.png" alt="">
-
+            <div id="playerCards" class="divCards">
+                <img class="carta" src="assets/cartas/cartas/grey_back.png" alt="">
             </div>
         </div>
     </div>
@@ -41,18 +37,23 @@
     <div class="row container">
         <div class="col">
             <h1>Computer - <small> 0 </small></h1>
-            <div id="player-cards">
-                <img class="carta" src="assets/cartas/cartas/10D.png" alt="">
-                <img class="carta" src="assets/cartas/cartas/10D.png" alt="">
-                <img class="carta" src="assets/cartas/cartas/10D.png" alt="">
-                <img class="carta" src="assets/cartas/cartas/10D.png" alt="">
-
+            <div id="computerCards" class="divCards">
+                <img class="carta" src="assets/cartas/cartas/red_back.png" alt="">
             </div>
         </div>
     </div>
 
     <script src="assets/js/underscore-min.js"></script>
     <script src="assets/js/juego.js"></script>
+
+    <script>
+    
+        // startGame();
+        document.querySelector('#btnNew').addEventListener('click', () => {
+            myModule.newGame();
+        })
+    
+    </script>
 
 </body>
 

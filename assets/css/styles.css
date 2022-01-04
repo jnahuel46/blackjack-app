@@ -21,3 +21,8 @@ html, body {
 #playerCards, #computerCards {
     height: 260px;
 }
+#newInstructions {
+    left: 239px;
+    margin-top: 89px;
+    font-size: 25px;
+}
